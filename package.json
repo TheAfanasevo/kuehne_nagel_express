@@ -1,0 +1,23 @@
+{
+  "name": "kuehne_nagel_expressjs",
+  "version": "1.0.0",
+  "description": "REST API task for Kuehne+Nagel recruitment process.",
+  "main": "app.js",
+  "author": "Mustafa Kursun <mustafa.kursun@futuready.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.18"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev nodemon app.js"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@src": "./src",
+    "@data": "./data"
+  }
+}
