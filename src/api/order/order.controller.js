@@ -1,24 +1,10 @@
-function Controller(Service, { arrayUtils }) {
+function Controller(Service, { arrayUtils, dateUtils }) {
   /**
    * Validate the date strings passed as query parameters.
    * @param {string[]} dates
    */
   function validateDateString(dates) {
-    if (!Array.isArray(dates)) {
-      throw new Error("Only array is accepted as valid parameter.");
-    }
-
-    let i = 0;
-    dates.forEach((date) => {
-      i++;
-      const parsedDate = Date.parse(date);
-      console.log(parsedDate, `date ${i}`);
-      if (isNaN(parsedDate)) {
-        throw new Error("Date provided in invalid format.");
-      }
-    });
-
-    return true;
+    dateUtils.validateDateString(dates);
   }
 
   /**
@@ -73,7 +59,10 @@ function Controller(Service, { arrayUtils }) {
 
     // assuming that objects with the same id are holding the same data
     const dataFilteredByUniqueId =
-      arrayUtils.filterArrayOfObjectsByUniqueObjectProperty(dateConvertedData);
+      arrayUtils.filterArrayOfObjectsByUniqueObjectProperty(
+        dateConvertedData,
+        "id"
+      );
 
     const dataGroupedAndCounted = dataFilteredByUniqueId.reduce(
       (counts, { year }) => {
