@@ -9,11 +9,16 @@
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "jest": "^28.1.2",
     "module-alias": "^2.2.2",
     "nodemon": "^2.0.18"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=dev nodemon app.js"
+    "dev": "cross-env NODE_ENV=dev nodemon app.js",
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true
   },
   "_moduleAliases": {
     "@root": ".",
