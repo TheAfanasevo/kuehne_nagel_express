@@ -18,7 +18,6 @@ function Routes(Controller) {
       return res.status(400).json({ success: false, error: error.message });
     }
 
-    // filter the results on 'date' field. can do it on json?
     let data;
     let dataFilteredByParams;
     try {
@@ -31,11 +30,6 @@ function Routes(Controller) {
         parsedDateMap
       );
 
-      // then filter the data by:
-      // - "id" field is not null, empty or undefined
-      // - "code" strictly equal to string "025"
-      // - "name" contains text "test"
-      // - "date" is between "from" and "to" values, which were obtained in the step 1
       const filterParams = {
         code: "025",
         name: "test",
@@ -56,11 +50,6 @@ function Routes(Controller) {
     try {
       const dataCountedAndGroupedByYear =
         Controller.countAndGroupByYear(dataFilteredByParams);
-
-      // plus
-      // docker file done, test it TODO:
-      // tests TODO:
-      // swagger docs TODO:
 
       res.status(200).json(dataCountedAndGroupedByYear);
     } catch (error) {
