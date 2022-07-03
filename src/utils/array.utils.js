@@ -10,8 +10,8 @@ module.exports.filterArrayOfObjectsByUniqueObjectProperty = (
   if (!Array.isArray(array)) {
     throw new Error("A non-array type passed to the function");
   }
-  if (typeof propertyKey !== "sring") {
-    throw new Errro("Argument propertyKey should be a string");
+  if (typeof propertyKey !== "string") {
+    throw new Error("Argument propertyKey should be a string");
   }
   return array.filter((filterValue, index, self) => {
     return (
