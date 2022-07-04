@@ -1,5 +1,5 @@
 ## ABOUT
-A Node.js REST API built with express.js. Receives one starting and one ending date parameter (from, to) and filters the data of orders/products given in the format of an [array of objects](./data/mockData.json) by the given date parameters. 
+A Node.js REST API built with express.js. Receives one starting and one ending date parameter (from, to) and filters the data of orders/items given in the format of an [array of objects](./data/mockData.json) by the given date parameters. 
 
 ## HOW-TO RUN
 ### With Docker
@@ -11,17 +11,13 @@ command: `docker run -i -t kuehne_nagel_express`
 
 ### With Yarn
 commands (run in order):
-<ol>
-    <li>`yarn install`</li>
-    <li>`yarn run dev`</li>
-</ol>
+*  `yarn install`
+*  `yarn run dev`
 
 ### With NPM
 commands (run in order):
-<ol>
-    <li>`npm install`</li>
-    <li>`npm run dev`</li>
-</ol>
+* `npm install`
+* `npm run dev`
 
 ## DOCUMENTATION
 ### Swagger
@@ -29,4 +25,4 @@ To see a simple REST API documentation created with Swagger, locate to: http://{
 
 Replace BASE_URL with the URL including the port on which you are running the applications.
 
-CHEERS!
+CHEERS! :joy:
