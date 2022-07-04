@@ -51,7 +51,9 @@ function Routes(Controller) {
       const dataCountedAndGroupedByYear =
         Controller.countAndGroupByYear(dataFilteredByParams);
 
-      res.status(200).json(dataCountedAndGroupedByYear);
+      res
+        .status(200)
+        .json({ success: true, data: dataCountedAndGroupedByYear });
     } catch (error) {
       res.status(500).json({ success: false, error: error.message });
     }
