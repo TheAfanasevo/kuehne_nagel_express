@@ -13,5 +13,9 @@ COPY . /app/
 # it exposes the port where our app is running that is port 8080.
 EXPOSE  80
 
+# run the tests
+RUN yarn test
+
 # it commands to run our app
-CMD node app.js
+#CMD node app.js
+CMD ["yarn", "run", "dev"]
