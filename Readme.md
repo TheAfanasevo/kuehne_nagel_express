@@ -1,5 +1,5 @@
 ## ABOUT
-A Node.js REST API built with express.js. Receives one starting and one ending date parameter (from, to) and filters the data of orders/products given in the format of an [array of objects](./data.mockData.json) by the given date parameters. 
+A Node.js REST API built with express.js. Receives one starting and one ending date parameter (from, to) and filters the data of orders/products given in the format of an [array of objects](./data/mockData.json) by the given date parameters. 
 
 ## HOW-TO RUN
 ### With Docker
